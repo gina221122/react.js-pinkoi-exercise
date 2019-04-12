@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "store": "純喫茶",
+        "transport": [
+            {
+                "name": "宅配",
+                "price": 30
+            },
+            {
+                "name": "超商7-11",
+                "price": 60
+            },
+            {
+                "name": "全家",
+                "price": 60
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "store": "麥香",
+        "transport": [
+            {
+                "name": "宅配",
+                "price": 30
+            },
+            {
+                "name": "超商",
+                "price": 60
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "store": "伊藤園",
+        "transport": [
+            {
+                "name": "7-11",
+                "price": 30
+            },
+            {
+                "name": "超商",
+                "price": 60
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "store": "50嵐",
+        "transport": [
+            {
+                "name": "宅配",
+                "price": 30
+            },
+            {
+                "name": "7-11",
+                "price": 60
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "store": "不明",
+        "transport": [
+            {
+                "name": "全家",
+                "price": 30
+            },
+            {
+                "name": "超商",
+                "price": 60
+            }
+        ]
+    }
+]

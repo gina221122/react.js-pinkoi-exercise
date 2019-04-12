@@ -1,0 +1,113 @@
+[
+    {
+        "id": 1,
+        "store_id": 1,
+        "name": "茉莉",
+        "price": 25,
+        "discount": 1,
+        "picture": "https://i.imgur.com/E7zMHJB.png",
+        "format": [
+            {
+                "name": "綠茶",
+                "num": 10
+            },
+            {
+                "name": "紅茶",
+                "num": 20
+            }
+        ],
+        "num": 5
+    },
+    {
+        "id": 2,
+        "store_id": 2,
+        "name": "阿薩姆",
+        "price": 25,
+        "discount": 0.9,
+        "picture": "https://i.imgur.com/TopDBQD.png",
+        "format": [
+            {
+                "name": "綠茶",
+                "num": 15
+            },
+            {
+                "name": "紅茶",
+                "num": 10
+            }
+        ],
+        "num": 5
+    },
+    {
+        "id": 3,
+        "store_id": 3,
+        "name": "黃金烏龍茶",
+        "price": 25,
+        "discount": 0.95,
+        "picture": "https://i.imgur.com/uUVA7Tp.jpg",
+        "num": 10,
+        "format": [
+            {
+                "name": "烏龍",
+                "num": 45
+            },
+            {
+                "name": "烏龍紅茶",
+                "num": 50
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "store_id": 4,
+        "name": "珍珠奶茶",
+        "price": 45,
+        "picture": "https://i.imgur.com/DHxXogL.png",
+        "num": 10,
+        "format": [
+            {
+                "name": "奶綠",
+                "num": 25
+            },
+            {
+                "name": "奶紅",
+                "num": 25
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "store_id": 5,
+        "name": "金桔檸檬",
+        "price": 55,
+        "picture": "https://i.imgur.com/mnhqKp7.png",
+        "num": 10,
+        "format": [
+            {
+                "name": "綠茶",
+                "num": 15
+            },
+            {
+                "name": "紅茶",
+                "num": 10
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "store_id": 2,
+        "name": "阿薩姆",
+        "price": 25,
+        "picture": "https://i.imgur.com/TopDBQD.png",
+        "num": 10,
+        "format": [
+            {
+                "name": "綠茶",
+                "num": 15
+            },
+            {
+                "name": "紅茶",
+                "num": 10
+            }
+        ]
+    }
+]

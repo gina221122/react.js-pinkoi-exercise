@@ -1,0 +1,16 @@
+.App ul{
+    list-style-type: none;
+}
+  
+.App ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+  
+.App ul li a {
+    text-decoration: none;
+}
+
+.home_logo{
+    /* width: 180px; */
+}
