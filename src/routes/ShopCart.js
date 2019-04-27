@@ -12,7 +12,7 @@ class ShopCart extends Component {
 			transport: [],
 			price: 0,
 			transport_price: 0,
-			stores_checkout:[],
+			stores_checkout: [],
 		}
 		this.getStores();
 	}
@@ -38,7 +38,8 @@ class ShopCart extends Component {
 
 	clearJsonItem = (key, clearNo) => {
 		const Items = this.getJsonItem(key);
-		const clearNoItem = _.filter(Items, (f) => f.no != clearNo);
+		// 盡量寫絕對等於, eslint 會嗆你XD
+		const clearNoItem = _.filter(Items, (f) => f.no !== clearNo);
 		this.setJsonItem(key, clearNoItem);
 	}
 
@@ -56,14 +57,14 @@ class ShopCart extends Component {
 		return _.find(stores, s => s.id === ID);
 	}
 
-	
+
 	handleTransport = (e, id) => {
 		const index = parseInt(e.target.value);
 		const { stores, transport } = this.state;
 		const { stores_checkout } = this.state;
 		let content = [];
 		content.id = id;
-		content.price = _.find(stores, s => s.id === id).transport[index-1].price;
+		content.price = _.find(stores, s => s.id === id).transport[index - 1].price;
 		let TF = true;
 		_.map(transport, (t) => {
 			if (t.id === content.id) {
@@ -84,7 +85,8 @@ class ShopCart extends Component {
 		let cart = this.getJsonItem("cart");
 
 		cart = _.map(cart, (c) => {
-			if (c.no == no) {
+			// 盡量寫絕對等於, eslint 會嗆你XD
+			if (c.no === no) {
 				c.num = num
 			}
 			return c;
@@ -93,12 +95,13 @@ class ShopCart extends Component {
 		this.calculatedAmount(stores_checkout);
 	}
 
-	
+
 	storeCheckout = (e, storeID) => {
 		const { stores_checkout } = this.state;
 		const sc = [
-			..._.filter(stores_checkout, (s)=>s.id!=storeID),
-			{id: storeID, TF: e}
+			// 盡量寫絕對等於, eslint 會嗆你XD
+			..._.filter(stores_checkout, (s) => s.id !== storeID),
+			{ id: storeID, TF: e }
 		];
 		this.setState({
 			stores_checkout: sc
@@ -112,8 +115,8 @@ class ShopCart extends Component {
 		let price = 0;
 		_.map(cart, (c) => {
 			const product = _.find(products, { 'id': c.id });
-			const stores_checkout_find = !_.isEmpty(product) && _.find(stores_checkout, (s)=>s.id===product.store_id);
-			if(!_.isEmpty(stores_checkout_find) && stores_checkout_find.TF){
+			const stores_checkout_find = !_.isEmpty(product) && _.find(stores_checkout, (s) => s.id === product.store_id);
+			if (!_.isEmpty(stores_checkout_find) && stores_checkout_find.TF) {
 				price += product.price * c.num;
 			}
 		})
@@ -123,14 +126,14 @@ class ShopCart extends Component {
 
 	calculatedTransport = (stores_checkout) => {
 		const { transport } = this.state;
-		let transport_price=0;
-			_.map(transport,(t)=>{
-				const stores_checkout_find = _.find(stores_checkout, (s)=>s.id===t['id']);
-				if(!_.isEmpty(stores_checkout_find) && stores_checkout_find.TF){
-					transport_price += t.price;
-				}
-			})
-		this.setState({transport_price});
+		let transport_price = 0;
+		_.map(transport, (t) => {
+			const stores_checkout_find = _.find(stores_checkout, (s) => s.id === t['id']);
+			if (!_.isEmpty(stores_checkout_find) && stores_checkout_find.TF) {
+				transport_price += t.price;
+			}
+		})
+		this.setState({ transport_price });
 	}
 
 	renderStore = (storeID, key) => {
@@ -259,7 +262,7 @@ class ShopCart extends Component {
 							<h4>結帳總金額 :</h4>
 						</div>
 						<div className="col-lg-6 text-right">
-							<h4>NT${price+transport_price}</h4>
+							<h4>NT${price + transport_price}</h4>
 						</div>
 					</div>
 				</div>
